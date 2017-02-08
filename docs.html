@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var docs = [
+				{id:1, words:['hello', 'world']},
+				{id:2, words:['hello', 'kids']},
+				{id:3, words:['zzzz', 'hello']},
+				{id:4, words:['world', 'kids']}
+	    	];
+	   	function findInArr(arr,arr2){
+	   		var arr3=[];
+	   		for(var i=0;i<arr.length;i++){
+	   			for(var j=0;j<arr2.length;j++){
+	   				if(arr[i]==arr2[j]){
+	   					arr3.push(arr[i]);
+	   				};
+	   			};
+	   		};
+	   		if(arr3.length==arr2.length){
+	   			return true;
+	   		}else{
+	   			return false;
+	   		};
+	   	};
+	    function findDocList(arr,arr2){
+	    	var arr3=[];
+	    	for(var i=0;i<arr.length;i++){
+	    		var wordsArr=arr[i].words;
+	    		if(findInArr(wordsArr,arr2)){
+	    			arr3.push('文档'+arr[i].id);
+	    		}
+	    	};
+	    	return arr3;
+	    };
+	    alert(findDocList(docs, ['hello'])) // 文档1，文档2，文档3
+	    alert(findDocList(docs, ['hello', 'world'])) // 文档1
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

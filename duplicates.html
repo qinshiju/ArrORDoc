@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function duplicates(arr) {  
+		    var res = [];  
+		    arr.forEach(function(item){  
+		        if(arr.indexOf(item)!=arr.lastIndexOf(item)&&res.indexOf(item)==-1)  
+		            res.push(item);  
+		    })  
+		    return res;  
+		}  
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
